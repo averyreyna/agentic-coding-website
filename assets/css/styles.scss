@@ -3,22 +3,12 @@
 
 @import "{{ site.theme }}";
 
-@font-face {
-  font-family: 'ABC Diatype';
-  src: url('/assets/fonts/ABC Diatype/ABC Diatype Variable/ABCDiatypeVariable-Trial.woff2') format('woff2'),
-       url('/assets/fonts/ABC Diatype/ABC Diatype Variable/ABCDiatypeVariable-Trial.woff') format('woff'),
-       url('/assets/fonts/ABC Diatype/ABC Diatype Variable/ABCDiatypeVariable-Trial.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
 html {
   scroll-behavior:smooth
 }
 
 body {
-  font-family: 'ABC Diatype', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .wrapper {
