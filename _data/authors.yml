@@ -1,20 +1,20 @@
-- name: Tae Soo Kim
-  affiliation: KAIST
+- name: Lisa Huang
+  affiliation: UC San Diego
   website: https://taesookim.com
-  img: taesoo.jpeg
-- name: Yoonjoo Lee
-  affiliation: KAIST
+  img: https://via.placeholder.com/150/cccccc/ffffff?text=LH
+- name: Avery Reyna
+  affiliation: Independent
   website: https://yoonjoolee.com
-  img: yoonjoo.jpeg
-- name: Jamin Shin
-  affiliation: NAVER AI Lab
+  img: https://via.placeholder.com/150/cccccc/ffffff?text=AR
+- name: Sorin Lerner
+  affiliation: Cornell
   website: https://www.jayshin.xyz/
-  img: jamin.jpg
-- name: Young-Ho Kim
-  affiliation: NAVER AI Lab
+  img: https://via.placeholder.com/150/cccccc/ffffff?text=SL
+- name: Haijun Xia
+  affiliation: UC San Diego
   website: http://younghokim.net/
-  img: youngho.jpg
-- name: Juho Kim
-  affiliation: KAIST
-  website: https://juhokim.com
-  img: juho.jpg
+  img: https://via.placeholder.com/150/cccccc/ffffff?text=HX
+- name: Brian Hempel
+  affiliation: UC San Diego
+  website: http://younghokim.net/
+  img: https://via.placeholder.com/150/cccccc/ffffff?text=BH

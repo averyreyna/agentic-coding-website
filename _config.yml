@@ -18,12 +18,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: EvalLM
+title: Professional Software Developers Don't Vibe, They Control
 theme: minima
-description: "Interactive Evaluation of Large Language Model Prompts on User-Defined Criteria"
+description: "AI Agent Use for Coding in 2025"
 
 syscolor: "#555555"
-sysfont: Inter
+sysfont: "ABC Diatype"
 video: https://www.youtube-nocookie.com/embed/7hvTnhiCO7Y?si=6I9aqVnatM8VoaJd
 paper: https://arxiv.org/abs/2309.13633
 code: https://github.com/kixlab/evallm

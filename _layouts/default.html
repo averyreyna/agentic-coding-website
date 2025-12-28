@@ -36,10 +36,18 @@
             <div class="author-image">
               {% if author.website %}
                 <a href="{{author.website}}">
-                  <img src="/assets/img/{{author.img}}"/>
+                  {% if author.img contains 'http' %}
+                    <img src="{{author.img}}"/>
+                  {% else %}
+                    <img src="/assets/img/{{author.img}}"/>
+                  {% endif %}
                 </a>
               {% else %}
-                <img src="/assets/img/{{author.img}}"/>
+                {% if author.img contains 'http' %}
+                  <img src="{{author.img}}"/>
+                {% else %}
+                  <img src="/assets/img/{{author.img}}"/>
+                {% endif %}
               {% endif %}
             </div>
             <p>

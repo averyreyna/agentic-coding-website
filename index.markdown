@@ -2,95 +2,46 @@
 layout: default
 ---
 
-<span class="sys-name">EvalLM</span> ⚗️ is an interactive system that aids prompt designers in iterating on **prompts** by evaluating and comparing generated outputs on user-defined **criteria**. With the aid of an **LLM-based evaluation assistant**, the user can iteratively evolve **criteria+prompts** to distinguish more specific qualities in outputs and then improve the quality of outputs on these aspects.
-
-<br/>
-
-{: .sys-img}
-![Animation of the overall workflow of EvalLM where users sample inputs from a dataset, generate outputs from each input using two different prompts, and then comparatively evaluate these outputs on user-defined criteria.](/assets/img/animation.gif)
+AI agents are rapidly changing software development. Unlike basic autocomplete tools, today's agents can autonomously access, modify, and test entire codebases through step-by-step actions. While some developers claim to use dozens of agents to build massive software projects, others report that agents slow them down or fail to deliver. This study investigates how experienced developers actually use AI agents in real-world software development, moving beyond the "vibe coding" narrative to understand what works and what doesn't.
 
 ------
 
-## Interface
+## The Study
 
-The main screen of the interface consists of three panels.
+This research examines four key questions about professional agentic coding through a two-part methodology:
 
-{: .sys-img}
-![Main screen of EvalLM shows three panels. The generation panel shows text boxes for the prompt and task instruction, and buttons for input sampling. The evaluation panel shows text boxes for the criteria, buttons for evaluating, and stacked bar charts for the evaluation results.](/assets/img/interface.png)
+**Field Observations (N=13)**: In-depth 75-minute sessions where experienced developers (3-25 years experience) worked on real tasks using their preferred AI agent setup, followed by semi-structured interviews.
 
-<b>Generation Panel</b>: To generate outputs, the user defines their overall **task instruction** (A), two **prompts** they want to compare (B), and then **samples inputs** from a dataset (C) which will be used to test the prompts.
+**Qualitative Survey (N=99)**: A broader survey to validate and expand findings across a larger population of experienced developers.
 
-**Evaluation Panel**: To evaluate outputs, the user defines a set of evaluation **<a href="#criteria" target="_self">criteria</a>** (D). Then, after evaluating, they can verify the overall *evaluation* performance of each prompt (E) or, if they created a validation set, *validate* how automatic evaluations align with ground-truth evaluations (F).
+### Research Questions
 
-**Data Panel**: This panel shows **<a href="#datarow" target="_self">data rows</a>** containing inputs, outputs, and evaluation results. 
+**RQ1 - Motivations**: What do experienced developers care about when incorporating agents?
 
-<br/>
+**RQ2 - Strategies**: What strategies do they employ when developing with agents?
 
-### <span id="criteria">Criteria</span>
+**RQ3 - Suitability**: What are agents suitable for, and when do they fail?
 
-{: .text-left}
-<span class="sys-name">EvalLM</span> allows users to evaluate outputs on their own criteria specific to their application and/or context. 
-<br/><br/>
-To define a criteria, the user simply provides the criteria with a **name** (A) and **description** (B) in natural language.
-<br/><br/>
-To assist users in creating more effective and helpful criteria, the system automatically **reviews** their criteria (C) and provides **suggestions** (D) on how the criteria can be *refined*, *merged* and *split*.
-
-{: .img-right}
-![Criteria are represented as a set of text boxes that contain the name and description of the criteria. Suggested revisions are shown below the criteria.](/assets/img/criteria.png)
-
-<br/>
-
-### <span id="datarow">Data Row</span>
-
-{: .sys-img}
-![Data Rows in the interface display inputs, output pairs, and evaluation results. Clicking on evaluation results opens a panel that shows the explanation for that evaluation underneath the row.](/assets/img/datarow.png)
-
-For each sampled **input** (A), the interface presents the **outputs** generated from each prompt side-by-side (B) and the **evaluation results** for each criteria next to the outputs (C). For each criteria, the evaluation results show which prompt produced the output that better satisfied that criteria.
-
-If the user wants to see more details, they can click on one of these evaluations to see the assistant's **explanation** (D). To help the user match the explanation and outputs, the system also **highlights** spans from the outputs that were considered to be important when evaluating the criteria (E).
-
-If the user selected to evaluate outputs on multiple trials, they can see the evaluations for **other trials** through the carousel (F). 
+**RQ4 - Sentiments**: How do developers feel about using agentic tools?
 
 ------
 
-## Video Demo
+## Key Findings
 
-See <span class="sys-name">EvalLM</span> in action in this Video Demo.
+The central finding: **Professional developers don't vibe code.** Instead, they carefully control agents through planning and supervision.
 
-{% if site.video %}
-<div class="video-wrapper">
-  <iframe src="{{site.video}}&color=white&rel=0&modestlogo=1" id="yt-video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-{% endif %}
+**Motivations**: Experienced developers seek productivity boosts but insist on maintaining fundamental software quality attributes. They don't simply delegate tasks blindly—they maintain agency in software design and implementation.
 
-------
+**Strategies**: Developers plan before implementing and validate all agent outputs. Rather than trusting the AI to "figure it out," they leverage their expertise to guide and supervise agent behavior.
 
-## Bibtex
-<pre>
-@inproceedings{10.1145/3613904.3642216,
-author = {Kim, Tae Soo and Lee, Yoonjoo and Shin, Jamin and Kim, Young-Ho and Kim, Juho},
-title = {EvalLM: Interactive Evaluation of Large Language Model Prompts on User-Defined Criteria},
-year = {2024},
-isbn = {9798400703300},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/3613904.3642216},
-doi = {10.1145/3613904.3642216},
-booktitle = {Proceedings of the CHI Conference on Human Factors in Computing Systems},
-articleno = {306},
-numpages = {21},
-keywords = {Evaluation, Human-AI Interaction, Large Language Models, Natural Language Generation},
-location = {<conf-loc>, <city>Honolulu</city>, <state>HI</state>, <country>USA</country>, </conf-loc>},
-series = {CHI '24}
-}
-</pre>
+**Task Suitability**: Agents excel at well-described, straightforward tasks but struggle with complex, ambiguous work. Experienced developers have learned to recognize which tasks are appropriate for delegation.
+
+**Developer Sentiment**: Despite limitations, developers feel overall positive about incorporating agents into their workflow. Their confidence comes from understanding how to complement the agents' weaknesses with their own expertise.
 
 ------
 
-{: .logos}
-[![Logo of KIXLAB](/assets/img/kixlab_logo.png)](https://kixlab.org)
-[![Logo of KAIST](/assets/img/kaist_logo.png)](https://kaist.ac.kr)
-[![Logo of NAVER](/assets/img/naver_logo.png)](https://www.facebook.com/NAVERAILAB)
+## Implications
 
-{: .center .acknowledgement}
-This research was supported by the **KAIST-NAVER Hypercreative AI Center**.
+This research reveals that successful agentic coding isn't about surrendering control—it's about strategic collaboration. Software development best practices remain essential when working with AI agents. The findings suggest opportunities for better agentic interfaces designed around professional workflows and guidelines that help developers use agents more effectively.
+
+The contrast with "vibe coding"—where developers fully trust the AI without carefully reviewing generated code—is stark. While vibe coding may offer a sense of "flow and joy," experienced professionals prioritize software quality and maintain rigorous oversight.
