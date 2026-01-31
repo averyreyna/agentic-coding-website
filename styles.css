@@ -1,33 +1,31 @@
-/* Scala Sans (all text except BibTeX) */
 @font-face {
   font-family: "Scala Sans Pro";
-  src: url("Scala Sans/scalasanspro-regular.ttf") format("truetype");
+  src: url("assets/Scala Sans/scalasanspro-regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Scala Sans Pro";
-  src: url("Scala Sans/scalasanspro-italic.ttf") format("truetype");
+  src: url("assets/Scala Sans/scalasanspro-italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Scala Sans Pro";
-  src: url("Scala Sans/scalasanspro-bold.ttf") format("truetype");
+  src: url("assets/Scala Sans/scalasanspro-bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Scala Sans Pro";
-  src: url("Scala Sans/scalasanspro-bolditalic.ttf") format("truetype");
+  src: url("assets/Scala Sans/scalasanspro-bolditalic.ttf") format("truetype");
   font-weight: 700;
   font-style: italic;
 }
 
-/* Base & variables */
 :root {
   --bg: #fff;
   --text: #333;
@@ -68,14 +66,13 @@ body {
   padding: var(--space-lg) var(--space-md);
 }
 
-/* Hero */
 .hero {
   text-align: center;
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-md);
 }
 
 .hero__title {
-  margin: 0 0 var(--space-sm);
+  margin: 0 0 var(--space-xs);
   font-size: clamp(1.4rem, 3.5vw, 1.75rem);
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -88,13 +85,12 @@ body {
   font-weight: 400;
 }
 
-/* Authors */
 .authors {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: var(--space-md);
-  margin-bottom: var(--space-xl);
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
 }
 
 .author {
@@ -102,28 +98,27 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  min-width: 100px;
+  min-width: 72px;
 }
 
 .author__avatar {
-  width: 80px;
-  height: 80px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xs);
 }
 
 .author__name {
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .author__affiliation {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
 }
 
-/* Actions */
 .actions {
   display: flex;
   flex-wrap: wrap;
@@ -178,7 +173,7 @@ body {
 }
 
 .section-title {
-  margin: 0 0 var(--space-md);
+  margin: 0 0 var(--space-xs);
   font-size: 1.25rem;
   font-weight: 700;
 }
@@ -187,7 +182,20 @@ body {
   margin: 0;
 }
 
-/* Video demo */
+.abstract__chart {
+  margin: var(--space-lg) 0 0;
+  text-align: center;
+}
+
+.abstract__chart-img {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: var(--radius);
+}
+
 .video-demo {
   margin-bottom: var(--space-xl);
 }
@@ -252,7 +260,6 @@ body {
   white-space: pre;
 }
 
-/* Footer */
 .footer {
   padding: var(--space-md) var(--space-lg);
   background: var(--footer-bg);
@@ -275,7 +282,6 @@ body {
   opacity: 0.8;
 }
 
-/* Responsive */
 @media (max-width: 640px) {
   .authors {
     gap: var(--space-md);
